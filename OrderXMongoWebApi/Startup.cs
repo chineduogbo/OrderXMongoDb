@@ -46,7 +46,7 @@ namespace OrderXMongoWebApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "OrderXMongoWebApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("https://orderxc.herokuapp.com/swagger/v1/swagger.json", "OrderXMongoWebApi v1"));
             }
             app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseHttpsRedirection();
