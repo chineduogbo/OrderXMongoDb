@@ -130,6 +130,7 @@ namespace OrderXMongoWebApi.Controllers
 
             return new SuccessDTO() { Id = 0, SuccessMessage = "Deleted Successfully" };
         }
+        [HttpPost]
         public async Task<SuccessDTO> AssignWaiterToTable(AssingWaiterDto model)
         {
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("orderxconnection"));

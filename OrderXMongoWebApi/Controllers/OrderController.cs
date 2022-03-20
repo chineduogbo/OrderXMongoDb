@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace OrderXMongoWebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]/[action]")]
     [ApiController]
     public class OrderController : ControllerBase
     {
@@ -46,7 +46,7 @@ namespace OrderXMongoWebApi.Controllers
             dbClient.GetDatabase("orderx").GetCollection<Order>("orders").InsertOne(createmodel);
             return true;
         }
-
+        [HttpGet]
         public async Task<OrderDto> GetOpenOrders(string UserId)
         {
             MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("orderxconnection"));
@@ -54,29 +54,29 @@ namespace OrderXMongoWebApi.Controllers
             var dto = _mapper.Map<OrderDto>(dblist);
             return dto;
         }
-        [HttpPut]
+        //[HttpPut]
 
-        public async Task<bool> Edit(Stock model, string EventId)
-        {
-            MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("orderxconnection"));
-            var dblist = dbClient.GetDatabase("orderx").GetCollection<Events>("events").AsQueryable().Where(x => x._id == EventId).FirstOrDefault();
-            var checkexistingstock = dblist.Stock.ToList().Where(x => x.Id == model.Id);
-            if (checkexistingstock != null)
-            {
-                Stock[] createdstock = null;
-                List<Stock> stocks = new List<Stock>();
-                stocks.AddRange(dblist.Stock.ToList());
-                Stock value = new Stock() { Id = Guid.NewGuid().ToString(), Category = model.Category, Name = model.Category, Price = model.Price, Quantity = model.Quantity };
-                stocks.Remove(checkexistingstock.FirstOrDefault());
-                stocks.Add(value);
-                createdstock = stocks.ToArray();
-                var filter = Builders<Events>.Filter.Eq("_id", EventId);
-                var update = Builders<Events>.Update.Set("Stock", createdstock);
-                await dbClient.GetDatabase("orderx").GetCollection<Events>("events").UpdateOneAsync(filter, update);
-                return true;
-            }
-            return false;
-        }
+        //public async Task<bool> Edit(Stock model, string EventId)
+        //{
+        //    MongoClient dbClient = new MongoClient(_configuration.GetConnectionString("orderxconnection"));
+        //    var dblist = dbClient.GetDatabase("orderx").GetCollection<Events>("events").AsQueryable().Where(x => x._id == EventId).FirstOrDefault();
+        //    var checkexistingstock = dblist.Stock.ToList().Where(x => x.Id == model.Id);
+        //    if (checkexistingstock != null)
+        //    {
+        //        Stock[] createdstock = null;
+        //        List<Stock> stocks = new List<Stock>();
+        //        stocks.AddRange(dblist.Stock.ToList());
+        //        Stock value = new Stock() { Id = Guid.NewGuid().ToString(), Category = model.Category, Name = model.Category, Price = model.Price, Quantity = model.Quantity };
+        //        stocks.Remove(checkexistingstock.FirstOrDefault());
+        //        stocks.Add(value);
+        //        createdstock = stocks.ToArray();
+        //        var filter = Builders<Events>.Filter.Eq("_id", EventId);
+        //        var update = Builders<Events>.Update.Set("Stock", createdstock);
+        //        await dbClient.GetDatabase("orderx").GetCollection<Events>("events").UpdateOneAsync(filter, update);
+        //        return true;
+        //    }
+        //    return false;
+        //}
         
     }
 }
