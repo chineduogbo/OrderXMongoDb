@@ -47,3 +47,16 @@ C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0
 C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Wille\source\repos\OrderXMongoWebApi\OrderXMongoWebApi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll

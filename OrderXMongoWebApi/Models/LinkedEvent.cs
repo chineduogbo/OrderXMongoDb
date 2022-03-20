@@ -2,7 +2,7 @@
 {
     public class LinkedEvent
     {
-        public string Name { get; set; }
+        public string Id { get; set; }
         public string EventName { get; set; }
         public string EventUserName { get; set; }
     }
